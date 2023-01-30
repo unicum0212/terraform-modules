@@ -7,3 +7,5 @@ variable "ingress_ports" {
 }
 
 variable "vpc_id" {}
+
+variable "name" {}
