@@ -9,3 +9,5 @@ variable "instance_type" {
 variable "env" {
   default = "blue"
 }
+
+variable "sec_group" {}
