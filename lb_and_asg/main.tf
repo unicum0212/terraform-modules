@@ -2,9 +2,9 @@
 resource "aws_autoscaling_group" "petclinic_asg" {
   name                 = "PetClinic-Project-ASG-${var.env}"
   launch_configuration = aws_launch_configuration.petclinic_lc.name
-  min_size             = 1
-  max_size             = 2
-  min_elb_capacity     = 1
+  min_size             = var.min_size
+  max_size             = var.max_size
+  min_elb_capacity     = var.min_elb_capacity
   vpc_zone_identifier  = [data.terraform_remote_state.admin.outputs.public_subnet_1, data.terraform_remote_state.admin.outputs.public_subnet_2]
   health_check_type    = "EC2"
   load_balancers       = [aws_elb.petclinic_elb.name]
