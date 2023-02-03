@@ -10,6 +10,9 @@ variable "env" {
   default = "env1"
 }
 
+variable "status" {
+  default = "Clean"
+}
 variable "min_size" {}
 
 variable "max_size" {}

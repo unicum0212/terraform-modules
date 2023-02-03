@@ -19,6 +19,11 @@ resource "aws_autoscaling_group" "petclinic_asg" {
     value               = var.env
     propagate_at_launch = true
   }
+  tag {
+    key                 = "Status"
+    value               = var.status
+    propagate_at_launch = true
+  }
 }
 
 resource "aws_launch_configuration" "petclinic_lc" {
