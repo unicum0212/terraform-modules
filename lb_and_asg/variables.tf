@@ -7,7 +7,7 @@ variable "instance_type" {
 }
 
 variable "env" {
-  default = "blue"
+  default = "Env_1"
 }
 
 variable "min_size" {}
