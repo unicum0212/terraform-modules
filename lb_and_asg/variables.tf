@@ -11,7 +11,7 @@ variable "env" {
 }
 
 variable "status" {
-  default = "Clean_Env1"
+  default = "Clean"
 }
 variable "min_size" {}
 
