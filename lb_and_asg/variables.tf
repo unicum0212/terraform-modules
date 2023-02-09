@@ -3,7 +3,7 @@ variable "keypair" {
 }
 
 variable "instance_type" {
-  default = "t3.micro"
+  default = "t3.nano"
 }
 
 variable "env" {
