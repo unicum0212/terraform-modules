@@ -52,15 +52,15 @@ resource "aws_elb" "petclinic_elb" {
     instance_protocol = "http"
   }
 
-  /*
+
   listener {
     lb_port            = 443
     lb_protocol        = "https"
     instance_port      = 80
     instance_protocol  = "http"
-    ssl_certificate_id = aws_acm_certificate.petclinic_certificate.id
+    ssl_certificate_id = data.terraform_remote_state.admin.outputs.certificate
   }
-*/
+
 
   health_check {
     healthy_threshold   = 2
