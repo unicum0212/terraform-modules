@@ -66,7 +66,7 @@ resource "aws_elb" "petclinic_elb" {
     healthy_threshold   = 2
     unhealthy_threshold = 2
     timeout             = 3
-    target              = "22"
+    target              = "SSH"
     interval            = 10
   }
 
