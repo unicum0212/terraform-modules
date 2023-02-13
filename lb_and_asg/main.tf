@@ -6,7 +6,7 @@ resource "aws_autoscaling_group" "petclinic_asg" {
   max_size             = var.max_size
   min_elb_capacity     = var.min_elb_capacity
   vpc_zone_identifier  = [data.terraform_remote_state.admin.outputs.public_subnet_1, data.terraform_remote_state.admin.outputs.public_subnet_2]
-  health_check_type    = "EC2"
+  health_check_type    = "ELB"
   load_balancers       = [aws_elb.petclinic_elb.name]
 
   tag {
